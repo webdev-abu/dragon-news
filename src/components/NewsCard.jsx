@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar, FaEye, FaBookmark, FaShareAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = (props = {}) => {
   const { news } = props || {};
@@ -57,9 +58,13 @@ const NewsCard = (props = {}) => {
       {/* Details */}
       <div className="px-4 text-gray-600">
         <p>{details.slice(0, 150)}...</p>
-        <a href="#" className="text-blue-500 hover:underline">
+        <Link
+          to={`/news/${news._id}`}
+          href="#"
+          className="text-blue-500 hover:underline"
+        >
           Read More
-        </a>
+        </Link>
       </div>
 
       {/* Footer with Rating and Views */}

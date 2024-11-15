@@ -8,7 +8,7 @@ const LeftNavBar = () => {
       .then((res) => res.json())
       .then((data) => setCategories(data.data.news_category));
   }, []);
-  console.log(categories);
+
   return (
     <div>
       <h3 className="text-[20px] font-semibold text-[#403F3F] mb-5">
